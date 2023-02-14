@@ -1,0 +1,34 @@
+@use "../global" as global;
+
+.c-section-title {
+  position: relative;
+  padding-top: global.rem(16);
+  color: global.$color-navy;
+  font-size: global.rem(24);
+  font-weight: global.$black;
+  text-align: center;
+  letter-spacing: 0.03em;
+  line-height: 1.7;
+  
+  @include global.mq('md') {
+    padding-top: global.rem(18);
+    font-size: global.rem(36);
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    color: global.$color-primary;
+    font-size: global.rem(16);
+    font-family: global.$font-en;
+    letter-spacing: 0.1em;
+    line-height: 1;
+
+    @include global.mq('md') {
+      font-size: global.rem(18);
+    }
+  }
+}

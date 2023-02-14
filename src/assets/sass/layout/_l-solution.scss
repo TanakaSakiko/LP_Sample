@@ -1,0 +1,8 @@
+@use "../global" as global;
+
+.l-solution {
+  @include global.mq('md') {
+    padding-top: global.rem(130);
+    padding-bottom: global.rem(200);
+  }
+}

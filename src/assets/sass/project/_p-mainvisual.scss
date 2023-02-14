@@ -1,0 +1,231 @@
+@use "../global" as global;
+
+.p-mainvisual {
+  padding-bottom: global.rem(7);
+
+  @include global.mq('md') {
+    height: global.rem(850);
+    background: transparent url(../img/mv_img02-pc.png) no-repeat center center / cover;
+  }
+}
+
+.p-mainvisual__img {
+  width:100%;
+  height: global.rem(250);
+  background: transparent url(../img/mv_img02-sp.png) no-repeat center center / cover;
+}
+
+.p-mainvisual__inner {
+  width: 100%;
+  height: 100%;
+  padding: 0 global.rem(10);
+  
+  @include global.mq('md') {
+    position: relative;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 global.rem(40);
+  }
+}
+
+.p-mainvisual__content {
+  text-align: center;
+
+  @include global.mq('md') {
+    padding-top: global.rem(200);
+    margin-right: 39%;
+  }
+}
+
+.p-mainvisual__subtitle {
+  margin-top: global.rem(20);
+  color: global.$color-primary;
+  font-weight: global.$black;
+  font-size: global.rem(18);
+  letter-spacing: 0.03em;
+  line-height: 1.5;
+  
+  @include global.mq('md') {
+    font-size: global.rem(24);
+  }
+}
+
+.p-mainvisual__title {
+  margin-top: global.rem(3);
+  color: global.$color-navy;
+  font-weight: global.$black;
+  font-size: global.rem(22);
+  letter-spacing: 0.03em;
+  line-height: 1.5;
+  
+  @include global.mq('md') {
+    margin-top: global.rem(2);
+    font-size: global.rem(36);
+  }
+
+  > span {
+    display: block;
+    margin-top: global.rem(-13);
+    font-family: global.$font-en;
+    font-size: global.rem(48);
+    letter-spacing: 0.01em;
+    
+    @include global.mq('md') {
+      margin-top: global.rem(-24);
+      font-size: global.rem(96);
+    }
+  }
+
+}
+
+.p-mainvisual__items {
+  display: flex;
+  flex-wrap: wrap;
+  width: global.rem(246);
+  margin: global.rem(8) auto 0;
+
+  @include global.mq('md') {
+    flex-wrap: nowrap;
+    justify-content: center;
+    width: 100%;
+    margin-top: global.rem(-3);
+  }
+}
+
+.p-mainvisual__item {
+  color: global.$color-navy;
+  border: 1px solid global.$color-navy;
+  border-radius: global.rem(4);
+  width: global.rem(120);
+  height: global.rem(22);
+  font-size: global.rem(12);
+  line-height: global.rem(20);
+  text-align: center;
+  
+  
+  &:nth-child(2n) {
+    margin-left: global.rem(6);
+    
+    @include global.mq('md') {
+      margin-left: 0;
+    }
+  }
+  
+  &:nth-child(n + 3) {
+    margin-top: global.rem(6);
+    
+    @include global.mq('md') {
+      margin-top: 0;
+    }
+  }
+
+  @include global.mq('md') {
+    width: auto;
+    padding: 0 global.rem(9);
+    font-size: global.rem(16);
+    height: global.rem(28);
+    line-height: global.rem(26);
+
+    &:not(:first-child) {
+      margin-left: global.rem(6);
+    }
+  }
+}
+
+.p-mainvisual__result {
+  width: 100%;
+  max-width: global.rem(400);
+  margin: global.rem(16) auto 0;
+
+  @include global.mq('md') {
+    width: global.rem(519);
+    margin-top: global.rem(18);
+    max-width: none;
+  }
+}
+
+.p-mainvisual__text {
+  margin-top: global.rem(39);
+  color: global.$color-navy;
+  font-weight: global.$bold;
+  font-size:global.rem(16);
+  
+  @include global.mq('md') {
+    margin-top: global.rem(60);
+    font-size:global.rem(20);
+  }
+}
+
+.p-mainvisual__button {
+  margin: global.rem(2) auto 0;
+  
+  @include global.mq('md') {
+    margin: global.rem(4) auto 0;
+  }
+}
+
+.p-mainvisual__small-text {
+  margin-top: global.rem(7);
+  color: global.$color-accent;
+  font-size: global.rem(12);
+  line-height: 1.5;
+  
+  @include global.mq('md') {
+    font-size: global.rem(16);
+  }
+}
+
+
+.p-mainvisual__scroll {
+  position: relative;
+  margin-top: global.rem(40);
+  color: global.$color-navy;
+  font-family: global.$font-en;
+  font-size: global.rem(8);
+  letter-spacing: 0.1em;
+  text-align: center;
+  
+  @include global.mq('md') {
+    position: absolute;
+    bottom: global.rem(20);
+    left: global.rem(40);
+    margin-top: 0;
+    font-size: global.rem(12);
+    writing-mode: vertical-rl;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: global.rem(-32);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: global.rem(32);
+    background: global.$color-navy;
+    animation: scroll-line 1.3s infinite;
+    
+    @include global.mq('md') {
+      top: global.rem(-70);
+      height: global.rem(60);
+    }
+  }
+}
+
+@keyframes scroll-line {
+  0% {
+    transform-origin: top;
+    transform: scaleY(0);
+  }
+  20% {
+    transform-origin: top;
+    transform: scaleY(1);
+  }
+  20.001% {
+    transform-origin: bottom;
+  }
+  100% {
+    transform-origin: bottom;
+    transform: scaleY(0);
+  }
+}

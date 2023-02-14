@@ -1,0 +1,51 @@
+// カラー
+$color-primary:#009DB0;
+$color-accent: #F96C6C;
+$color-black:#4D4D4D;
+$color-navy:#171B4B;
+$color-gray: #ccc;
+$color-shadow: rgba(#000, 0.16);
+
+// フォント
+$font-en: 'Alata', sans-serif;
+$font-ja: 'Noto Sans JP', sans-serif;
+
+// フォントウェイト
+$normal: 400;
+$bold: 700;
+$black: 900;
+
+// インナー
+$inner: 1100px;
+
+// 余白
+$padding-pc: 40px;
+$padding-sp: 10px;
+
+// 重なり順
+$layer-modal: 100;
+$layer-drawer: 40;
+$layer-floating: 30;
+$layer-header: 20;
+$layer-footer: 10;
+$layer-up: 2;
+$layer-default: 1;
+$layer-background: -1;
+
+//ブレイクポイント
+$breakpoints: (
+  sm: 374,
+  md: 767,
+  lg: 1099,
+);
+
+//スクリーンサイズ
+$screen-min: 375px;
+$screen-max: 1920px;
+
+//メディアクエリー
+$mediaquerys: (
+  sm: "screen and (max-width: #{map-get($breakpoints,'sm') + 1}px)",
+  md: "screen and (min-width: #{map-get($breakpoints,'md') + 1}px)",
+  lg: "screen and (min-width: #{map-get($breakpoints,'lg') + 1}px)",
+);

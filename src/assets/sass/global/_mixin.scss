@@ -1,0 +1,7 @@
+@use "./variables" as global;
+
+@mixin mq($mediaquery: md) {
+  @media #{map-get(global.$mediaquerys, $mediaquery)} {
+    @content;
+  }
+}

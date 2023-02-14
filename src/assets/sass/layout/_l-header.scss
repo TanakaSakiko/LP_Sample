@@ -1,0 +1,17 @@
+@use "../global" as global;
+
+.l-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: global.rem(10);
+  width: calc(100% - global.rem(10) * 2);
+  height: global.rem(60);
+  z-index: global.$layer-header;
+  
+  @include global.mq('md') {
+    width: calc(100% - global.rem(40) * 2);
+    height: global.rem(90);
+    margin: global.rem(20) global.rem(40);
+  }
+}

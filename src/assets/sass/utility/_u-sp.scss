@@ -1,0 +1,7 @@
+@use "../global" as global;
+
+.u-sp {
+  @include global.mq('md') {
+    display: none;
+  }
+}

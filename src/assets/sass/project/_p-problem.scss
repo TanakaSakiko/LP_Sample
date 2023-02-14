@@ -1,0 +1,110 @@
+@use "../global" as global;
+
+.p-problem {
+  position: relative;
+  background: #F9F9F9;
+
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: global.rem(-21);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: global.rem(22) global.rem(18) 0 global.rem(18);
+    border-color: #F9F9F9 transparent transparent transparent;
+    
+    @include global.mq('md') {
+      bottom: global.rem(-44);
+      border-width: global.rem(54) global.rem(44) 0 global.rem(44);
+    }
+  }
+}
+
+.p-problem__title {
+  &::before {
+    content: "PROBLEM";
+  }
+}
+
+.p-problem__content {
+  @include global.mq('md') {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: global.rem(80);
+  }
+}
+
+.p-problem__img {
+  width: 100%;
+  max-width: global.rem(400);
+  margin: 0 auto;
+  margin-top: global.rem(38);
+  box-shadow: 0 3px 10px global.$color-shadow;
+
+  @include global.mq('md') {
+    width: calc(100% - global.rem(600));
+    max-width: none;
+    margin: 0;
+    box-shadow: 0 10px 40px global.$color-shadow;
+  }
+}
+
+.p-problem__items {
+  width: 100%;
+  max-width: global.rem(500);
+  margin: 0 auto;
+  margin-top: global.rem(21);
+
+  @include global.mq('md') {
+    width: global.rem(540);
+    max-width: none;
+    margin: 0;
+  }
+}
+
+.p-problem__item {
+  position: relative;
+  padding: global.rem(10);
+  padding-left: global.rem(32);
+  color: global.$color-navy;
+  font-weight: global.$bold;
+  background: #fff;
+  border-radius: global.rem(10);
+  text-align: justify;
+  
+  @include global.mq('md') {
+    padding: global.rem(14) global.rem(20);
+    padding-left: global.rem(50);
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: global.rem(14);
+    left: global.rem(10);
+    width: global.rem(16);
+    height: global.rem(16);
+    background: transparent url(../img/icon_check.png) no-repeat center center / contain;
+    
+    @include global.mq('md') {
+      top: 50%;
+      left: global.rem(20);
+      transform: translateY(-50%);
+      width: global.rem(20);
+      height: global.rem(20);
+    }
+  }
+  
+
+  &:not(:first-child) {
+    margin-top: global.rem(8);
+    
+    @include global.mq('md') {
+      margin-top: global.rem(12);
+    }
+  }
+}

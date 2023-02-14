@@ -1,0 +1,4 @@
+//rem変換
+@function rem($pixel) {
+  @return calc($pixel / 16 * 1rem);
+}

@@ -1,0 +1,53 @@
+@use  "../global" as global;
+
+html {
+  //〜375px
+  @include global.mq('sm') {
+    font-size: calc(16 / #{map-get(global.$breakpoints, 'sm')} * 100vw);
+  }
+
+  //〜767px
+  font-size: 16px;
+
+  //768px〜インナー幅
+  @include global.mq('md') {
+    font-size: calc(16 / #{map-get(global.$breakpoints, 'lg')} * 100vw);
+  }
+
+  //インナー幅〜
+  @include global.mq('lg') {
+    font-size: 16px;
+  }
+}
+
+body{
+  font-family: global.$font-ja;
+  color: global.$color-black;
+  font-size: global.rem(14);
+  font-weight: global.$normal;
+  line-height: 1.8;
+  letter-spacing: 0.01em;
+  background: #fff;
+
+  @include global.mq('md') {
+    font-size: global.rem(16);
+  }
+
+  &.is-fixed {
+    position: fixed;
+    width: 100%;
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  letter-spacing: inherit;
+}
+

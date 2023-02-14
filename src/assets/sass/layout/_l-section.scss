@@ -1,0 +1,9 @@
+@use "../global" as global;
+
+.l-section {
+  padding: global.rem(69) 0;
+  
+  @include global.mq('md') {
+    padding: global.rem(120) 0;
+  }
+}

@@ -1,0 +1,67 @@
+@use "../global" as global;
+
+.c-button {
+  text-align: center;
+
+  a {
+    position: relative;
+    display: block;
+    color: #fff;
+    font-size: global.rem(16);
+    font-weight: global.$bold;
+    background: global.$color-accent;
+    border-radius: 9999px;
+    border: 2px solid global.$color-accent;
+    
+    @include global.mq('md') {
+      transition: all 0.3s;
+      
+      &:hover {
+        color: global.$color-accent;
+        background: #fff;
+      }
+    }
+  }
+
+  &--header {
+    width: global.rem(220);
+
+    > a {
+      line-height: global.rem(44);
+    }
+  }
+  
+  &--mv {
+    width: global.rem(300);
+    
+    @include global.mq('md') {
+      width: global.rem(400);
+    }
+
+    > a {
+      line-height: global.rem(46);
+      
+      @include global.mq('md') {
+        font-size: global.rem(20);
+        line-height: global.rem(58);
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        top: 50%;
+        right: global.rem(20);
+        transform: translateY(-50%);
+        width: global.rem(6);
+        height: global.rem(10);
+        background: transparent url(../img/icon_button-arrow.png) no-repeat center center / contain;
+        
+        @include global.mq('md') {
+          right: global.rem(22);
+          width: global.rem(10);
+          height: global.rem(14);
+        }
+      }
+    }
+  }
+}
