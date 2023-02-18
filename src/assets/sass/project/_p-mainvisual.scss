@@ -160,7 +160,7 @@
   margin: global.rem(2) auto 0;
   
   @include global.mq('md') {
-    margin: global.rem(4) auto 0;
+    margin: 0 auto ;
   }
 }
 
@@ -187,8 +187,8 @@
   
   @include global.mq('md') {
     position: absolute;
-    bottom: global.rem(20);
-    left: global.rem(40);
+    bottom: global.rem(10);
+    left: global.rem(39);
     margin-top: 0;
     font-size: global.rem(12);
     writing-mode: vertical-rl;

@@ -152,7 +152,7 @@
 .p-solution__styling-item-list {
   margin-top: global.rem(10);
   padding-top: global.rem(10);
-  border-top: 1px solid global.$color-gray;
+  border-top: 1px dotted global.$color-gray;
   
   @include global.mq('md') {
     margin-top: global.rem(20);

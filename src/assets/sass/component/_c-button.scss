@@ -61,6 +61,47 @@
           width: global.rem(10);
           height: global.rem(14);
         }
+        
+      }
+    }
+
+    &:hover {
+      > a {
+        &::after {
+          background: transparent url(../img/icon_button-arrow-hover.svg) no-repeat center center / contain;
+        }
+      }
+    }
+  }
+
+  &--cta {
+    width: global.rem(300);
+
+    > a {
+      line-height: global.rem(46);
+      
+      @include global.mq('md') {
+        font-size: global.rem(16);
+        line-height: global.rem(46);
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        top: 50%;
+        right: global.rem(20);
+        transform: translateY(-50%);
+        width: global.rem(6);
+        height: global.rem(10);
+        background: transparent url(../img/icon_button-arrow.png) no-repeat center center / contain;
+      }
+    }
+
+    &:hover {
+      > a {
+        &::after {
+          background: transparent url(../img/icon_button-arrow-hover.svg) no-repeat center center / contain;
+        }
       }
     }
   }

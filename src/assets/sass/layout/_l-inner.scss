@@ -2,11 +2,12 @@
 
 .l-inner {
   width: 100%;
+  max-width: global.rem(600);
+  margin: 0 auto;
   padding: 0 global.rem(10);
   
   @include global.mq('md') {
     max-width: global.$inner + global.$padding-pc * 2;
-    margin: 0 auto;
     padding: 0 global.rem(40);
   }
 }

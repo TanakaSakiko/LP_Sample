@@ -2,7 +2,7 @@
 var flag = false;
 var position;
 
-$('.js-header__icon, .js-header__drawer-overlay, .js-header__nav-items > li > a').click(function (e) {
+$('.js-header__icon, .js-drawer__icon,  .js-drawer__overlay, .js-drawer__nav-items > li > a').click(function (e) {
   e.preventDefault();
   if (flag == false) {
     position = $(window).scrollTop();
@@ -13,11 +13,23 @@ $('.js-header__icon, .js-header__drawer-overlay, .js-header__nav-items > li > a'
     window.scrollTo(0, position);
     flag = false;
   }
-  $('.js-header__nav, .js-header__drawer-overlay').toggleClass('is-active');
+  $('.js-drawer').toggleClass('is-active');
   return false;
 });
 
-//スムーススクロールはここに表示
+//スムーススクロール
+$('a[href^="#"]').click(function () {
+  var header = $('.js-header').innerHeight();
+  var id = $(this).attr('href');
+  var position = 0;
+  if (id != '#') {
+    var position = $(id).offset().top - header;
+  }
+
+  $('body, html').animate({
+    scrollTop: position
+  }, 1000);
+});
 
 //ヘッダーメニューカレント表示
 function currentNav(navItem) {

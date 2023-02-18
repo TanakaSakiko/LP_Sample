@@ -17,21 +17,35 @@
 <body>
 
 	<header class="p-header l-header js-header wow fadeIn">
-		<h1 class="p-header__logo"><a href="#"><img src="./assets/img/logo.png" alt="AirPhoto"></a></h1>
-		<div class="p-header__icon-bar js-header__icon"></div>
-		<nav class="p-header__nav js-header__nav">
-			<div class="p-header__icon-close js-header__icon"></div>
-			<div class="p-header__drawer-logo"><a href="#"><img src="./assets/img/logo.png" alt="AirPhoto"></a></div>
-			<ul class="p-header__nav-items js-header__nav-items">
-				<li><a href="#service">サービス</a></li>
+		<h1 class="p-header__logo"><a href="#"><img src="./assets/img/logo.png" alt="Air Photo"></a></h1>
+		<div class="p-header__icon js-header__icon u-sp"><img src="./assets/img/icon_header-bar.svg" alt="メニュー"></div>
+		<!-- SP menu -->
+		<div class="p-drawer u-sp js-drawer">
+			<nav class="p-drawer__nav">
+				<div class="p-drawer__icon js-drawer__icon"><img src="./assets/img/icon_drawer-close.svg" alt="メニュー"></div>
+				<div class="p-drawer__logo"><a href="#"><img src="./assets/img/logo.png" alt="AirPhoto"></a></div>
+				<ul class="p-drawer__nav-items js-drawer__nav-items">
+					<li><a href="#solution">サービス</a></li>
+					<li><a href="#feature">特徴</a></li>
+					<li><a href="#price">料金</a></li>
+					<li><a href="#case">導入事例</a></li>
+					<li><a href="#faq">よくあるご質問</a></li>
+				</ul>
+				<div class="p-drawer__button c-button c-button--header"><a href="#contact">お問い合わせ</a></div>
+			</nav>
+			<div class="p-drawer__overlay js-drawer__overlay"></div>
+		</div>
+		<!-- PC menu -->
+		<nav class="p-header__nav js-header__nav u-pc">
+			<ul class="p-header__nav-items">
+				<li><a href="#solution">サービス</a></li>
 				<li><a href="#feature">特徴</a></li>
 				<li><a href="#price">料金</a></li>
 				<li><a href="#case">導入事例</a></li>
 				<li><a href="#faq">よくあるご質問</a></li>
 			</ul>
-			<div class="p-header__button c-button c-button--header"><a href="#contact">お問い合わせ</a></div>
 		</nav>
-		<div class="p-header__drawer-overlay js-header__drawer-overlay"></div>
+		<div class="p-header__button c-button c-button--header u-pc"><a href="#contact">お問い合わせ</a></div>
 	</header>
 
 	<div class="p-mainvisual">
@@ -46,7 +60,7 @@
 					<li class="p-mainvisual__item">最短即日納品</li>
 					<li class="p-mainvisual__item">写真を選んで購入</li>
 				</ul>
-				<div class="p-mainvisual__result"><img src="./assets/img/mv_img01.png" alt="実績画像"></div>
+				<div class="p-mainvisual__result"><img src="./assets/img/mv_img01.png" alt="満足度100% 売上改善実績273% CTA改善実績167%"></div>
 				<p class="p-mainvisual__text">初回注文30%OFF</p>
 				<div class="p-mainvisual__button c-button c-button--mv"><a href="#contact">お問い合わせはこちらから</a></div>
 				<p class="p-mainvisual__small-text">本気で売れる素材を求めている方はぜひご相談ください。</p>
@@ -59,7 +73,7 @@
 		<div class="l-inner">
 			<h2 class="p-problem__title c-section-title">こんな課題はありませんか？</h2>
 			<div class="p-problem__content">
-				<div class="p-problem__img"><img src="./assets/img/problem_img.jpg" alt="イメージ画像"></div>
+				<div class="p-problem__img"><img src="./assets/img/problem_img.jpg" alt="こんな課題はありませんか？"></div>
 				<ul class="p-problem__items">
 					<li class="p-problem__item">カメラマンへのディレクションが難しい</li>
 					<li class="p-problem__item">売上につながる写真がわからない</li>
@@ -71,26 +85,26 @@
 		</div>
 	</section>
 
-	<section class="p-solution l-solution l-section">
+	<section class="p-solution l-solution l-section" id="solution">
 		<div class="l-inner">
 			<h2 class="p-solution__title c-section-title">商品写真の撮影は<br class="u-sp">私たちにお任せください！</h2>
 			<ul class="p-solution__items">
 				<li class="p-solution__item">
-					<div class="p-solution__item-img"><img src="./assets/img/solution_img01.jpg" alt=""></div>
+					<div class="p-solution__item-img"><img src="./assets/img/solution_img01.jpg" alt="クリエイティブな商品写真を提供します。"></div>
 					<p class="p-solution__item-title"><span>クリエイティブな商品写真</span>を<br>提供します。</p>
 				</li>
 				<li class="p-solution__item">
-					<div class="p-solution__item-img"><img src="./assets/img/solution_img02.jpg" alt=""></div>
+					<div class="p-solution__item-img"><img src="./assets/img/solution_img02.jpg" alt="EC・D2Cと物撮り専門のクリエイティブチームが対応します。"></div>
 					<p class="p-solution__item-title"><span>EC・D2Cと物撮り専門</span>の<br>クリエイティブチームが<br>対応します。</p>
 				</li>
 				<li class="p-solution__item">
-					<div class="p-solution__item-img"><img src="./assets/img/solution_img03.jpg" alt=""></div>
+					<div class="p-solution__item-img"><img src="./assets/img/solution_img03.jpg" alt="ブランドイメージにぴったりのスタイリング写真でECの売上を向上させます。"></div>
 					<p class="p-solution__item-title">ブランドイメージにぴったりの<br>スタイリング写真で<br><span>ECの売上を向上</span>させます。</p>
 				</li>
 			</ul>
 			<ul class="p-solution__styling-items">
 				<li class="p-solution__styling-item">
-					<div class="p-solution__styling-item-img"><img src="./assets/img/solution_img04.jpg" alt=""></div>
+					<div class="p-solution__styling-item-img"><img src="./assets/img/solution_img04.jpg" alt="ディスプレイ写真"></div>
 					<div class="p-solution__styling-item-body">
 						<h3 class="p-solution__styling-item-title">ディスプレイ写真</h3>
 						<p class="p-solution__styling-item-text">ブランドイメージや使用イメージを伝えるための写真で、『スタイリング写真』『イメージ写真』とも呼ばれます。<br>AirPhotoでは、以下の写真を『ディスプレイ写真』と呼んでいます。</p>
@@ -103,7 +117,7 @@
 					</div>
 				</li>
 				<li class="p-solution__styling-item">
-					<div class="p-solution__styling-item-img"><img src="./assets/img/solution_img05.jpg" alt=""></div>
+					<div class="p-solution__styling-item-img"><img src="./assets/img/solution_img05.jpg" alt="シーズン写真"></div>
 					<div class="p-solution__styling-item-body">
 						<h3 class="p-solution__styling-item-title">シーズン写真</h3>
 						<p class="p-solution__styling-item-text">季節やシーズンに合わせた写真の撮影を実施しております。<br>ハロウィンやクリスマスなどのイベントに適した写真をご提供させて頂きますので、お気軽にお問い合わせください。</p>
@@ -113,8 +127,109 @@
 		</div>
 	</section>
 
+	<section class="p-feature l-feature l-section" id="feature">
+		<div class="l-inner">
+			<h2 class="p-feature__title c-section-title">AirPhotoが選ばれる7つの特徴</h2>
+			<ul class="p-feature__items">
+				<li class="p-feature__item">
+					<div class="p-feature__item-img"><img src="./assets/img/feature_img01.jpg" alt="EC・D2C事業者専門の撮影サービス"></div>
+					<div class="p-feature__item-body">
+						<h3 class="p-feature__item-title">EC・D2C事業者専門の<br>撮影サービス</h3>
+						<p class="p-feature__item-subtitle">D2Cの実績のあるチーム</p>
+						<p class="p-feature__item-text">私たちはペットケアブランド “HUGFAM”、ヘルスケアブランド “SUTTO”の2つのブランドを立上げ、2021年にM&Aでの売却に至るまで事業拡大をさせてきました。自社でECに取り組んできたチームだからこそ、ブランドイメージにぴったりの写真でECの売上を向上させます。</p>
+					</div>
+				</li>
+				<li class="p-feature__item">
+					<div class="p-feature__item-img"><img src="./assets/img/feature_img02.jpg" alt="スタイリング診断で撮影アイデアをレコメンド"></div>
+					<div class="p-feature__item-body">
+						<h3 class="p-feature__item-title">スタイリング診断で<br>撮影アイデアをレコメンド</h3>
+						<p class="p-feature__item-subtitle">日本初！商品撮影のレコメンド</p>
+						<p class="p-feature__item-text">日本初の商品撮影に関するレコメンドエンジン『スタイリング診断』をご用意しました。「どんな商品写真にしたいかイメージがつかない」という方も、いくつかの質問に答えるだけで撮影イメージをご提案します。</p>
+					</div>
+				</li>
+				<li class="p-feature__item">
+					<div class="p-feature__item-img"><img src="./assets/img/feature_img03.jpg" alt="気に入った写真だけを購入できるシステム"></div>
+					<div class="p-feature__item-body">
+						<h3 class="p-feature__item-title">気に入った写真だけを<br>購入できるシステム</h3>
+						<p class="p-feature__item-subtitle">撮影後のサンプルを見てから購入可能</p>
+						<p class="p-feature__item-text">撮影後に、”AirPhoto”の透かし入りのサンプル写真を仮納品します。実際の仕上がりをご確認いただいてから、ご希望の写真のみご購入いただけるシステムとしました。もう気に入らない写真にお金を払う必要はありません。</p>
+					</div>
+				</li>
+				<li class="p-feature__item">
+					<div class="p-feature__item-body">
+						<h3 class="p-feature__item-title">商品を発送するだけの<br class="u-sp">オンライン完結型</h3>
+						<p class="p-feature__item-subtitle">撮影にもオンライン立ち会い可能</p>
+						<p class="p-feature__item-text">撮影したい商品をスタジオに発送すれば、あとはオンラインでのミーティングで撮影・納品まですべて完結！スタジオでの商品保管も行っており、いつでも好きなタイミングで撮影をご依頼いただけます。</p>
+					</div>
+				</li>
+				<li class="p-feature__item">
+					<div class="p-feature__item-body">
+						<h3 class="p-feature__item-title">シンプルな料金体系</h3>
+						<p class="p-feature__item-subtitle">スタイリング数とカット数による料金</p>
+						<p class="p-feature__item-text">撮影したい商品をスタジオに発送すれば、あとはオンラインでのミーティングで撮影・納品まですべて完結！スタジオでの商品保管も行っており、いつでも好きなタイミングで撮影をご依頼いただけます。</p>
+					</div>
+				</li>
+				<li class="p-feature__item">
+					<div class="p-feature__item-body">
+						<h3 class="p-feature__item-title">自社スタジオにて、<br class="u-sp">自社カメラマンが撮影</h3>
+						<p class="p-feature__item-subtitle">自社リソースによる品質の担保</p>
+						<p class="p-feature__item-text">“AirPhoto”は、カメラマンとのマッチングサービスではありません。自社スタジオにて、自社カメラマンが撮影を行います。弊社Webサイトに掲載されている写真も全て自社カメラマンが撮影しており、再現性を持って高クオリティの写真を撮影いたします。</p>
+					</div>
+				</li>
+				<li class="p-feature__item">
+					<div class="p-feature__item-body">
+						<h3 class="p-feature__item-title">満足度100%の実績</h3>
+						<p class="p-feature__item-subtitle">クライアント・ファーストの撮影</p>
+						<p class="p-feature__item-text">AirPhoto内の営業・マーケティング担当やEC・SNS担当とカメラマンが常にコミュニケーションを取ることで、クライアント様の商品に合わせたクリエイティブの提供やスピード感を持った納品が可能です。その結果、100%の企業様に満足頂いております。（当社顧客アンケート[2022年8月時点]より）</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</section>
 
+	<section class="p-importance l-importance l-section">
+		<div class="l-inner">
+			<h2 class="p-importance__title c-section-title">たかが「物撮り」。<br class="u-sp">されど「物撮り」。</h2>
+			<p class="p-importance__text">お客様は写真や説明文などのサイトに掲載されている情報だけで購入するかどうかを判断します。<br class="u-pc">ECサイトを運営する場合、物撮りが売れ行きを左右するといっても過言ではありません。</p>
+			<ul class="p-importance__items">
+				<li class="p-importance__item">
+					<h3 class="p-importance__item-title">「商品写真」重視の傾向</h3>
+					<p class="p-importance__item-text">10〜30代の女性4,404名を対象に行われたコスメのEC利用に関する調査の結果、<br class="u-pc">「商品ページで商品写真を重視する」と答えた人は10代〜30代のいずれの世代でも半数を超えています。</p>
+					<div class="p-importance__item-img-wrap">
+						<p class="p-importance__item-img-title">商品ページで<br class="u-sp">どの情報を重視しますか？</p>
+						<div class="p-importance__item-img u-sp"><img src="./assets/img/importance_img01-sp.png" alt="商品ページでどの情報を重視しますか？"></div>
+						<div class="p-importance__item-img u-pc"><img src="./assets/img/importance_img01-pc.png" alt="商品ページでどの情報を重視しますか？"></div>
+					</div>
+				</li>
+				<li class="p-importance__item">
+					<h3 class="p-importance__item-title">不満の原因にもなりやすい</h3>
+					<p class="p-importance__item-text">『Digital Commerce 360』と「Bizrate Insights」が1,000人のEC利用者を対象に2019年に行った調査の結果、<br class="u-pc">半数近くの人が「商品写真が少ない」ことに不満を持っていることがわかりました。</p>
+					<div class="p-importance__item-img-wrap">
+						<p class="p-importance__item-img-title">ECサイトで経験したことがある<br class="u-sp">不満は何ですか？</p>
+						<div class="p-importance__item-img u-sp"><img src="./assets/img/importance_img02-sp.png" alt="ECサイトで経験したことがある不満は何ですか？"></div>
+						<div class="p-importance__item-img u-pc"><img src="./assets/img/importance_img02-pc.png" alt="ECサイトで経験したことがある不満は何ですか？"></div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</section>
 
+	<div class="p-cta l-cta">
+		<div class="p-cta__inner l-inner">
+			<div class="p-cta__text-wrap">
+				<p class="p-cta__title">EC・D2C事業者専門の物撮りサービス<span>AirPhoto</span></p>
+				<ul class="p-cta__items">
+					<li class="p-cta__item">オンライン完結</li>
+					<li class="p-cta__item">高クオリティ</li>
+					<li class="p-cta__item">最短即日納品</li>
+					<li class="p-cta__item">写真を選んで購入</li>
+				</ul>
+				<p class="p-cta__text">初回注文30%OFF</p>
+				<div class="p-cta__button c-button c-button--cta"><a href="#contact">お問い合わせはこちらから</a></div>
+			</div>
+			<div class="p-cta__img u-pc"><img src="./assets/img/cta_img01.png" alt="EC・D2C事業者専門の物撮りサービスAirPhoto"></div>
+		</div>
+	</div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
