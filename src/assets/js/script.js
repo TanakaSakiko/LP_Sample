@@ -60,3 +60,52 @@ function currentNav(navItem) {
 $(window).on('load resize', function () {
   currentNav('.js-header__nav li a');
 });
+
+
+//swiper
+let reviewSwiper = new Swiper ('.p-review__swiper-container', {
+  loop: true,
+  spaceBetween: 43,
+	autoplay: {
+    delay: 5000,
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+    type: 'bullets',
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  breakpoints: {
+    // 768px以上の場合
+    768: {
+      spaceBetween: 100,
+    },
+  },
+});
+
+//swiper(price)
+let priceSwiper = new Swiper ('.p-price__swiper-container01, .p-price__swiper-container02', {
+  loop: true,
+  spaceBetween: 53,
+	autoplay: {
+    delay: 5000,
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+    type: 'bullets',
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  breakpoints: {
+    // 768px以上の場合
+    768: {
+      spaceBetween: 100,
+    },
+  },
+});

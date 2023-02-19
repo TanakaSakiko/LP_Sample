@@ -1,0 +1,116 @@
+@use  "../global" as global;
+
+.p-importance {
+  
+}
+
+.p-importance__title {
+  margin-left: global.rem(12);
+  
+  @include global.mq('md') {
+    margin-left: 0;
+  }
+  
+  &::before {
+    margin-left: global.rem(-6);
+    content: "IMPORTANCE";
+
+    @include global.mq('md') {
+      margin-left: 0;
+    }
+  }
+}
+
+.p-importance__text {
+  margin-top: global.rem(10);
+  color: global.$color-navy;
+  font-weight: global.$bold;
+  text-align: justify;
+  
+  @include global.mq('md') {
+    margin-top: global.rem(20);
+    text-align: center;
+  }
+}
+
+.p-importance__items {
+  margin-top: global.rem(40);
+  
+  @include global.mq('md') {
+    margin-top: global.rem(80);
+  }
+}
+
+.p-importance__item {
+  &:not(:first-child) {
+    margin-top: global.rem(41);
+    
+    @include global.mq('md') {
+      margin-top: global.rem(80);
+    }
+  }
+}
+
+.p-importance__item-title {
+  font-size: global.rem(20);
+  color: global.$color-navy;
+  font-weight: global.$black;
+  letter-spacing: 0.03em;
+  line-height: 1.7;
+  text-align: center;
+  
+  @include global.mq('md') {
+    font-size: global.rem(28);
+  }
+}
+
+.p-importance__item-text {
+  margin-top: global.rem(10);
+  text-align: justify;
+
+  @include global.mq('md') {
+    text-align: center;
+  }
+  
+}
+
+.p-importance__item-img-wrap {
+  width: 100%;
+  margin-top: global.rem(16);
+  padding: global.rem(30) global.rem(10);
+  background: #fff;
+  border-radius: global.rem(20);
+  
+  @include global.mq('md') {
+    max-width: none;
+    margin-top: global.rem(40);
+    padding: global.rem(60) global.rem(40);
+  }
+}
+
+.p-importance__item-img-title {
+  font-size: global.rem(16);
+  color: global.$color-navy;
+  font-weight: global.$black;
+  letter-spacing: 0.03em;
+  line-height: 1.7;
+  text-align: center;
+  
+  @include global.mq('md') {
+    font-size: global.rem(20);
+  }
+}
+
+.p-importance__item-img {
+  width: 100%;
+  max-width: global.rem(400);
+  margin: 0 auto;
+  margin-top: global.rem(20);
+  margin-top: global.rem(20);
+  
+  @include global.mq('md') {
+    width: global.rem(880);
+    max-width: none;
+    margin-top: global.rem(40);
+  }
+}

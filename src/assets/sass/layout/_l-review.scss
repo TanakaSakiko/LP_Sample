@@ -1,0 +1,9 @@
+@use  "../global" as global;
+
+.l-review {
+  padding-bottom: global.rem(58);
+  
+  @include global.mq('md') {
+    padding-bottom: global.rem(87);
+  }
+}

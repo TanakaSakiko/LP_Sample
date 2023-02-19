@@ -1,0 +1,9 @@
+@use  "../global" as global;
+
+.l-feature {
+  padding-bottom: global.rem(29);
+
+  @include global.mq('md') {
+    padding-top: global.rem(120);
+  }
+}

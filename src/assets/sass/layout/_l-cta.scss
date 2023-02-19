@@ -1,0 +1,10 @@
+@use  "../global" as global;
+
+.l-cta {
+  background:  linear-gradient(86.36deg, #070A2F 0%, #171B4B 100%);
+  padding: global.rem(70) global.rem(10);
+
+  @include global.mq('md') {
+    padding: 0;
+  }
+}

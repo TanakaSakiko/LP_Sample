@@ -1,0 +1,9 @@
+@use "../global" as global;
+
+.l-problem {
+  background: #F9F9F9;
+
+  @include global.mq('md') {
+    padding: global.rem(120) 0;
+  }
+}

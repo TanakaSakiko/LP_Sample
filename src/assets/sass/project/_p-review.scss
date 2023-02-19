@@ -1,0 +1,130 @@
+@use  "../global" as global;
+
+.p-review {
+
+}
+
+.p-review__title {
+  &::before {
+    content: "REVIEW";
+  }
+}
+
+.p-review__swiper-container {
+  position: relative;
+  width: 100%;
+  max-width: global.rem(460);
+  margin: 0 auto;
+  margin-top: global.rem(40);
+  padding: 0 global.rem(32);
+  padding-bottom: global.rem(47);
+  overflow: hidden;
+  
+  @include global.mq('md') {
+    width: global.rem(906);
+    max-width: none;
+    margin-top: global.rem(80);
+    padding: 0 global.rem(54);
+    padding-bottom: global.rem(70);
+  }
+
+  .swiper-wrapper {
+  }
+  
+  .swiper-slide {
+    @include global.mq('md') {
+    display: flex;
+    }
+  }
+  
+  .swiper-slide-img {
+    box-shadow: 0 3px 10px global.$color-shadow;
+    
+    @include global.mq('md') {
+      width: global.rem(400);
+      height: global.rem(260);
+      box-shadow: 0 10px 40px global.$color-shadow;
+    }
+  }
+  
+  .swiper-slide-body {
+    margin-top: global.rem(20);
+    
+    @include global.mq('md') {
+      width: global.rem(360);
+      margin-left: auto;
+      margin-top: global.rem(0);
+    }
+  }
+  
+  .swiper-slide-title {
+    height: global.rem(54);
+    color: global.$color-navy;
+    font-size: global.rem(16);
+    font-weight: global.$black;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+    
+    @include global.mq('md') {
+      height: global.rem(68);
+      font-size: global.rem(20);
+    }
+  }
+  
+  .swiper-slide-text {
+    height: global.rem(145);
+    margin-top: global.rem(4);
+    text-align: justify;
+  }
+  
+  .swiper-slide-small-text {
+    margin-top: global.rem(20);
+    color: global.$color-primary;
+    font-size: global.rem(12);
+    
+    @include global.mq('md') {
+      font-size: global.rem(14);
+    }
+  }
+
+  .swiper-pagination {
+    bottom: global.rem(0);
+
+    .swiper-pagination-bullet {
+      width: global.rem(6);
+      height: global.rem(6);
+      margin: global.rem(5);
+      background: global.$color-gray;
+      opacity: 1;
+    }
+
+    .swiper-pagination-bullet-active {
+      background: global.$color-primary;
+    }
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    margin-top: global.rem(-46);
+    width: global.rem(16);
+    height: global.rem(42);
+    
+    @include global.mq('md') {
+      margin-top: global.rem(-56);
+      }
+
+    &::after {
+      content: "";
+    }
+  }
+
+  .swiper-button-prev {
+    left: 0;
+    background: transparent url(../img/icon_slider-arrow-prev.svg) no-repeat center center / contain;
+  }
+  
+  .swiper-button-next {
+    right: 0;
+    background: transparent url(../img/icon_slider-arrow-next.svg) no-repeat center center / contain;
+  }
+}

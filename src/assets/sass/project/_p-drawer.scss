@@ -1,0 +1,93 @@
+@use "../global" as global;
+
+.p-drawer {
+
+}
+
+.p-drawer__nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: global.rem(260);
+  height: 100vh;
+  padding: global.rem(30) global.rem(20);
+  background: #fff;
+  transform: translateX(105%);
+  transition: transform 0.4s;
+  z-index: global.$layer-drawer;
+}
+
+.p-drawer__icon {
+  position: absolute;
+  top: global.rem(10);
+  right: global.rem(10);
+  width: global.rem(40);
+  height: global.rem(40);
+}
+
+.p-drawer__logo {
+  width: global.rem(112);
+  margin: 0 auto;
+}
+
+.p-drawer__nav-items {
+  height: calc(100% - 156px);
+  margin-top: global.rem(14);
+  overflow-y: scroll;
+
+  > li {
+
+    &:not(:last-child) {
+      border-bottom: 1px dotted global.$color-gray;
+    }
+
+    > a {
+      position: relative;
+      display: block;
+      padding: global.rem(20) global.rem(10) global.rem(19);
+      color: global.$color-navy;
+      font-weight: global.$bold;
+      line-height: 1;
+
+      &::after {
+        position: absolute;
+        content: "";
+        right: global.rem(7);
+        top: 50%;
+        transform: translateY(-50%);
+        width: global.rem(14);
+        height: global.rem(10);
+        background: transparent url(../img/icon_drawer-arrow.svg) no-repeat center center / contain;
+      }
+    }
+  }
+}
+
+.p-drawer__button {
+  margin-top: global.rem(40);
+}
+
+.p-drawer__overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: global.$color-navy;
+  opacity: 0.7;
+  z-index: global.$layer-drawer - 1;
+  visibility: hidden;
+}
+
+// ドロワーオープン時
+.p-drawer.is-active {
+  .p-drawer__nav {
+    transform: translateX(0);
+  }
+
+  .p-drawer__overlay {
+    display: block;
+    visibility: visible;
+  }
+}

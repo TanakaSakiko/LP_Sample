@@ -1,0 +1,9 @@
+@use  "../global" as global;
+
+.l-importance {
+  background: #EEFAFD;
+
+  @include global.mq('md') {
+    padding-bottom: global.rem(97);
+  }
+}
