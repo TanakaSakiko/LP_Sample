@@ -1,0 +1,21 @@
+@use  "../global" as global;
+
+.l-contact {
+  position: relative;
+  padding-top: global.rem(73);
+
+  @include global.mq('md') {
+    padding-top: global.rem(96);
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(238, 250, 253, 0.3) -7.07%, #EEFAFD 39.38%);
+    z-index: global.$layer-background;
+  }
+}

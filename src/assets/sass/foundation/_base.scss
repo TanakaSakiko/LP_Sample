@@ -51,3 +51,9 @@ a {
   letter-spacing: inherit;
 }
 
+a[href^="tel:"] {
+  @include global.mq('md') {
+    pointer-events: none;
+  }
+}
+

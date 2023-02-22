@@ -1,0 +1,208 @@
+@use  "../global" as global;
+
+.p-faq {
+}
+
+.p-faq__title {
+  &::before {
+    content: "FAQ";
+  }
+}
+
+.p-faq__tab-wrap {
+  margin-top: global.rem(40);
+  overflow-x: auto;
+  
+  @include global.mq('md') {
+    margin-top: global.rem(80);
+    overflow-x: hidden;
+  }
+}
+
+.p-faq__tab-items {
+  display: flex;
+  width: global.rem(724);
+  margin: 0 global.rem(10);
+
+  @include global.mq('md') {
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+  }
+}
+
+.p-faq__tab-item {
+  width: global.rem(140);
+  font-weight: global.$bold;
+  color: global.$color-navy;
+  border: 1px solid global.$color-navy;
+  border-radius: global.rem(8);
+  line-height: global.rem(39);
+  text-align: center;
+  transition: all 0.4s;
+  
+  @include global.mq('md') {
+    width: global.rem(152);
+    line-height: global.rem(47);
+
+    &:hover {
+      color: #fff;
+      background: global.$color-navy;
+    }
+  }
+
+  &:not(:first-child) {
+    margin-left: global.rem(6);
+    
+    @include global.mq('md') {
+      margin-left: global.rem(10);
+    }
+  }
+
+  &.is-active {
+    color: #fff;
+    background: global.$color-navy;
+  }
+}
+
+.p-faq__items {
+  display: none;
+  margin-top: global.rem(30);
+  
+  @include global.mq('md') {
+    width: 100%;
+    max-width: global.rem(800);
+    margin: 0 auto;
+    margin-top: global.rem(60);
+  }
+
+  &.is-active {
+    display: block;
+  }
+}
+
+.p-faq__item {
+ padding: global.rem(9) global.rem(10);
+ border-radius: global.rem(8);
+ border: 1px solid global.$color-gray;
+ 
+ @include global.mq('md') {
+   padding: global.rem(16) global.rem(20);
+}
+ 
+ &:not(:first-child) {
+  margin-top: global.rem(9);
+  
+  @include global.mq('md') {
+    margin-top: global.rem(11);
+  }
+ }
+
+ &.is-active {
+  .p-faq__item-title {
+    &::after {
+      background: transparent url(../img/faq_icon01.svg) no-repeat center center / contain;
+    }
+  }
+
+  .p-faq__item-text {
+    display: block;
+  }
+ }
+}
+
+.p-faq__item-title {
+  position: relative;
+  padding: 0 global.rem(25);
+  color: global.$color-navy;
+  font-weight: global.$bold;
+  text-align: justify;
+  
+  @include global.mq('md') {
+    padding: 0 global.rem(34);
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+  }
+  
+  &::before {
+    content: "Q";
+    top: global.rem(2);
+    left: 0;
+    width: global.rem(20);
+    height: global.rem(20);
+    color: #fff;
+    font-family: global.$font-en;
+    background: global.$color-primary;
+    border-radius: 50%;
+    line-height: global.rem(20);
+    text-align: center;
+    
+    @include global.mq('md') {
+      top: global.rem(3);
+      top: global.rem(2);
+      width: global.rem(24);
+      height: global.rem(24);
+      padding-left: global.rem(1);
+      line-height: global.rem(22);
+    }
+  }
+  
+  &::after {
+    content: "";
+    top: global.rem(8);
+    right: 0;
+    width: global.rem(10);
+    height: global.rem(10);
+    background: transparent url(../img/faq_icon02.svg) no-repeat center center / contain;
+    
+    @include global.mq('md') {
+      top: global.rem(8);
+      width: global.rem(14);
+      height: global.rem(14);
+    }
+  }
+}
+
+.p-faq__item-text {
+  display: none;
+  position: relative;
+  margin-top: global.rem(14);
+  padding-top: global.rem(16);
+  padding-left: global.rem(25);
+  text-align: justify;
+  border-top: 1px dotted global.$color-gray;
+  
+  @include global.mq('md') {
+    padding-left: global.rem(34);
+  }
+
+  &::before {
+    position: absolute;
+    content: "A";
+    top: global.rem(17);
+    left: 0;
+    width: global.rem(20);
+    height: global.rem(20);
+    color: global.$color-primary;
+    font-family: global.$font-en;
+    border-radius: 50%;
+    line-height: global.rem(18);
+    text-align: center;
+    border: 1px solid global.$color-primary;
+    
+    @include global.mq('md') {
+      top: global.rem(18);
+      width: global.rem(24);
+      height: global.rem(24);
+      line-height: global.rem(20);
+    }
+  }
+
+  > span {
+    display: block;
+    margin-top: global.rem(20);
+  }
+}

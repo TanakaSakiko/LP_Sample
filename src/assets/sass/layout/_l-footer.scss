@@ -1,0 +1,10 @@
+@use  "../global" as global;
+
+.l-footer {
+  padding: global.rem(6) 0;
+  background: #222;
+  
+  @include global.mq('md') {
+    padding: global.rem(10) 0;
+  }
+}

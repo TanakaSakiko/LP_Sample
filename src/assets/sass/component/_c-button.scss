@@ -44,6 +44,12 @@
       @include global.mq('md') {
         font-size: global.rem(20);
         line-height: global.rem(58);
+
+        &:hover {
+          &::after {
+            background: transparent url(../img/icon_button-arrow-hover.svg) no-repeat center center / contain;
+          }
+        }
       }
 
       &::after {
@@ -65,13 +71,6 @@
       }
     }
 
-    &:hover {
-      > a {
-        &::after {
-          background: transparent url(../img/icon_button-arrow-hover.svg) no-repeat center center / contain;
-        }
-      }
-    }
   }
 
   &--cta {
@@ -83,6 +82,12 @@
       @include global.mq('md') {
         font-size: global.rem(16);
         line-height: global.rem(46);
+
+        &:hover {
+          &::after {
+            background: transparent url(../img/icon_button-arrow-hover.svg) no-repeat center center / contain;
+          }
+        }
       }
 
       &::after {
@@ -97,12 +102,5 @@
       }
     }
 
-    &:hover {
-      > a {
-        &::after {
-          background: transparent url(../img/icon_button-arrow-hover.svg) no-repeat center center / contain;
-        }
-      }
-    }
   }
 }

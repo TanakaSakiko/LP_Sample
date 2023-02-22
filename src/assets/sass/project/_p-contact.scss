@@ -1,0 +1,338 @@
+@use  "../global" as global;
+
+.p-contact {
+}
+
+.p-contact__title {
+  &::before {
+    content: "CONTACT";
+  }
+}
+
+.p-contact__text {
+  margin-top: global.rem(10);
+  font-weight: global.$bold;
+  color: global.$color-navy;
+  
+  @include global.mq('md') {
+    margin-top: global.rem(20);
+    text-align: center;
+  }
+}
+
+.p-contact__form,
+.p-contact__tel {
+  margin-top: global.rem(40);
+  padding: global.rem(30) global.rem(10);
+  border-radius: global.rem(20);
+  background: #fff;
+  
+  @include global.mq('md') {
+    width: 100%;
+    max-width: global.rem(800);
+    margin: 0 auto;
+    margin-top: global.rem(50);
+    padding: global.rem(50);
+  }
+}
+
+.p-contact__form-title,
+.p-contact__tel-title {
+  font-size: global.rem(20);
+  font-weight: global.$black;
+  color: global.$color-navy;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  text-align: center;
+  
+  @include global.mq('md') {
+    font-size: global.rem(28);
+  }
+}
+
+.p-contact__items {
+  margin-top: global.rem(40);
+}
+
+.p-contact__item {
+  @include global.mq('md') {
+    display: flex;
+  }
+
+  &:not(:first-child) {
+    margin-top: global.rem(25);
+    
+    @include global.mq('md') {
+      margin-top: global.rem(16);
+    }
+  }
+}
+
+.p-contact__item-label {
+  font-weight: global.$bold;
+  line-height: 1.7;
+
+  @include global.mq('md') {
+    width: global.rem(160);
+    line-height: global.rem(40);
+  }
+}
+
+.p-contact__item-input {
+  @include global.mq('md') {
+    width: calc(100% - global.rem(160));
+  }
+  
+  [type="text"],
+  [type="email"],
+  [type="tel"],
+  [type="url"],
+  textarea {
+    width: 100%;
+    margin-top: global.rem(3);
+    padding: global.rem(13) global.rem(10);
+    
+    @include global.mq('md') {
+      margin-top: 0;
+      padding: global.rem(12) global.rem(16);
+      transition: border 0.4s;
+    }
+
+    //初期化
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    box-shadow: none;
+    appearance: none;
+    border: 1px solid global.$color-gray;
+    border-radius: global.rem(4);
+    background: #fff;
+
+    &::placeholder {
+      color: global.$color-gray;
+      font-size: global.rem(14);
+      font-weight: global.$normal;
+      
+      @include global.mq('md') {
+        font-size: global.rem(16);
+      }
+    }
+
+    &:hover {
+      @include global.mq('md') {
+        border: 1px solid global.$color-primary;
+      }
+    }
+  }
+
+  [type="text"],
+  [type="email"],
+  [type="tel"],
+  [type="url"] {
+    height: global.rem(40);
+  }
+
+  [type="tel"] {
+    width: global.rem(170);
+    
+    @include global.mq('md') {
+      width: global.rem(220);
+    }
+  }
+
+  textarea {
+    height: global.rem(100);
+    resize: vertical;
+  }
+}
+
+.p-contact__item-radio {
+  position: relative;
+  margin-top: global.rem(7);
+
+  [type="radio"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    
+    + span {
+      position: relative;
+      display: inline-block;
+      margin-right: global.rem(26);
+      padding-left: global.rem(28);
+      
+      @include global.mq('md') {
+        padding-left: global.rem(30);
+      }
+  
+      &::after,
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 50%;
+      }
+
+      &::before {
+        left: 0;
+        width: global.rem(20);
+        height: global.rem(20);
+        border: 1px solid global.$color-gray;
+        background: #fff;
+
+        @include global.mq('md') {
+          transition: border 0.4s;
+        }
+      }
+  
+      &::after {
+        display: none;
+        left: global.rem(4);
+        width: global.rem(12);
+        height: global.rem(12);
+        background: global.$color-primary;
+      }
+    }
+
+    &:hover + span {
+      &::before {
+        @include global.mq('md') {
+          border: 1px solid global.$color-primary;
+        }
+      }
+    }
+  
+    &:checked + span {
+      &::after {
+        display: block;
+      }
+    }
+  
+    &:focus + span {
+      &::before {
+        outline: -webkit-focus-ring-color auto 1px;
+      }
+    }
+  }
+}
+
+
+.p-contact__item-text {
+  margin-top: global.rem(-4);
+  font-size: global.rem(12);
+  text-align: justify;
+  line-height: 1;
+  
+  @include global.mq('md') {
+    margin-top: 0;
+  }
+}
+
+.p-contact__form-button {
+  margin-top: global.rem(36);
+  text-align: center;
+  
+  @include global.mq('md') {
+    margin-top: global.rem(40);
+  }
+
+  input[type="submit"]  {
+    //初期化
+    font-family: inherit;
+    appearance: none;
+    border: none;
+
+    display: inline-block;
+    width: global.rem(250);
+    color: #fff;
+    font-size: global.rem(16);
+    font-weight: global.$bold;
+    background: global.$color-primary url(../img/icon_button-arrow.png) no-repeat right global.rem(20) center / global.rem(6) global.rem(10);
+    border-radius: 9999px;
+    border: 2px solid global.$color-primary;
+    line-height: global.rem(44);
+    transition: all 0.4s;
+    
+    &:disabled {
+      background: global.$color-gray url(../img/icon_button-arrow.png) no-repeat right global.rem(20) center / global.rem(6) global.rem(10);
+      border: 2px solid global.$color-gray;
+    }
+    
+    &.is-active {
+      &:hover {
+        @include global.mq('md') {
+          color: global.$color-primary;
+          background: #fff url(../img/icon_submit-arrow.svg) no-repeat right global.rem(20) center / global.rem(6) global.rem(10);
+          border-radius: 9999px;
+        }
+      }
+    }
+  }
+}
+
+.p-contact__tel {
+  margin-top: global.rem(50);
+
+  @include global.mq('md') {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.p-contact__tel-title-wrap {
+}
+
+.p-contact__tel-text {
+  font-weight: global.$bold;
+  color: global.$color-primary;
+  text-align: center;
+}
+
+.p-contact__tel-number-wrap {
+  @include global.mq('md') {
+    margin-left: global.rem(60);
+  }
+}
+
+.p-contact__tel-number {
+  margin-top: global.rem(30);
+  text-align: center;
+
+  @include global.mq('md') {
+    margin-top: 0;
+  }
+
+  > a {
+    display: inline-block;
+    position: relative;
+    padding-left: global.rem(34);
+    font-size: global.rem(32);
+    font-weight: global.$bold;
+    color: global.$color-navy;
+    line-height: 1;
+    letter-spacing: 0;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: global.rem(28);
+      height: global.rem(28);
+      background: transparent url(../img/contact_icon.svg) no-repeat center center / contain;
+    }
+  }
+}
+.p-contact__tel-time {
+  margin-top: global.rem(1);
+  font-size: global.rem(12);
+  text-align: center;
+  
+  @include global.mq('md') {
+    font-size: global.rem(14);
+  }
+}

@@ -58,6 +58,7 @@
   font-size: global.rem(12);
   line-height: global.rem(22);
   text-align: center;
+  white-space: nowrap;
   
   @include global.mq('md') {
     width: auto;
@@ -81,7 +82,6 @@
       margin-top: 0;
     }
   }
-
 }
 
 .p-cta__text  {

@@ -1,7 +1,6 @@
 @use  "../global" as global;
 
 .p-price {
-  
 }
 
 .p-price__title {
@@ -95,7 +94,6 @@
 }
 
 .p-price__content01-price {
-
 }
 
 .p-price__content01-price-title {
@@ -177,7 +175,7 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: global.rem(1);
+      width: global.rem(2);
       height: global.rem(500);
       border-left: 1px dotted global.$color-gray;
     }
@@ -305,7 +303,6 @@
 }
 
 .p-price__content02-price-title {
-
 }
 
 .p-price__content02-price-text {
