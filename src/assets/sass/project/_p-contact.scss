@@ -3,6 +3,10 @@
 .p-contact {
 }
 
+.p-contact__inner {
+  position: relative;
+}
+
 .p-contact__title {
   &::before {
     content: "CONTACT";

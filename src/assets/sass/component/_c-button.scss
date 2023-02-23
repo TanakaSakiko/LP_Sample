@@ -60,7 +60,7 @@
         transform: translateY(-50%);
         width: global.rem(6);
         height: global.rem(10);
-        background: transparent url(../img/icon_button-arrow.png) no-repeat center center / contain;
+        background: transparent url(../img/icon_button-arrow.svg) no-repeat center center / contain;
         
         @include global.mq('md') {
           right: global.rem(22);
@@ -98,7 +98,7 @@
         transform: translateY(-50%);
         width: global.rem(6);
         height: global.rem(10);
-        background: transparent url(../img/icon_button-arrow.png) no-repeat center center / contain;
+        background: transparent url(../img/icon_button-arrow.svg) no-repeat center center / contain;
       }
     }
 

@@ -111,6 +111,7 @@ a {
 
 .l-contact {
 	position: relative;
+	background: transparent url(../img/contact_bg.jpg) no-repeat top center/contain;
 	padding-top: 4.5625rem;
 }
 
@@ -118,8 +119,7 @@ a {
 	position: absolute;
 	top: 0;
 	left: 0;
-	z-index: -1;
-	background: linear-gradient(180deg, rgba(238, 250, 253, 0.3) -7.07%, #EEFAFD 39.38%);
+	background: linear-gradient(180deg, rgba(238, 250, 253, 0.3) 0%, #EEFAFD 19.84%);
 	width: 100%;
 	height: 100%;
 	content: "";
@@ -166,7 +166,7 @@ a {
 	top: 50%;
 	right: 1.25rem;
 	transform: translateY(-50%);
-	background: transparent url(../img/icon_button-arrow.png) no-repeat center center/contain;
+	background: transparent url(../img/icon_button-arrow.svg) no-repeat center center/contain;
 	width: 0.375rem;
 	height: 0.625rem;
 	content: "";
@@ -185,7 +185,7 @@ a {
 	top: 50%;
 	right: 1.25rem;
 	transform: translateY(-50%);
-	background: transparent url(../img/icon_button-arrow.png) no-repeat center center/contain;
+	background: transparent url(../img/icon_button-arrow.svg) no-repeat center center/contain;
 	width: 0.375rem;
 	height: 0.625rem;
 	content: "";
@@ -1328,6 +1328,10 @@ a {
 	margin-top: 1.25rem;
 }
 
+.p-contact__inner {
+	position: relative;
+}
+
 .p-contact__title::before {
 	content: "CONTACT";
 }
@@ -1622,7 +1626,12 @@ a[href^="tel:"] {
 }
 
 .l-contact {
+	background: transparent url(../img/contact_bg.jpg) no-repeat top center/cover;
 	padding-top: 6rem;
+}
+
+.l-contact::before {
+	background: rgba(238, 250, 253, 0.3);
 }
 
 .l-footer {
